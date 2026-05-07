@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breaking News Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="generator-page" aria-labelledby="page-title">
+      <section class="intro">
+        <div class="brand" aria-label="breaking news generator">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>breaking news generator</span>
+        </div>
+
+        <h1 id="page-title">breaking news</h1>
+        <p class="lede">make an unofficial breaking-news style graphic</p>
+      </section>
+
+      <section class="tool" aria-label="Breaking news graphic generator">
+        <form class="news-form" id="news-form">
+          <label>
+            <span>style</span>
+            <select id="style">
+              <option value="bbc">BBC-inspired</option>
+              <option value="sky">Sky-inspired</option>
+            </select>
+          </label>
+
+          <label>
+            <span>headline</span>
+            <textarea id="headline" rows="4" required>BREAKING NEWS GOES HERE</textarea>
+          </label>
+
+          <label>
+            <span>image</span>
+            <input id="image" type="file" accept="image/*" />
+          </label>
+
+          <div class="actions">
+            <button class="button button-light" type="submit">Generate</button>
+            <a class="button button-dark" id="download" href="#" download="breaking-news.png">
+              Download
+            </a>
+          </div>
+        </form>
+
+        <div class="preview-shell">
+          <canvas
+            id="news-canvas"
+            width="1600"
+            height="900"
+            aria-label="Generated breaking news graphic"
+          ></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
